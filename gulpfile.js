@@ -151,11 +151,12 @@ exports.watch = watch;
 exports.default = gulp.series(
   gulp.parallel(
     clean,
+    css,
+    copy,
 
   ),
 
-  css,
-  copy,
+
   gulp.parallel(
     watch,
     server,
