@@ -5,6 +5,7 @@
 
   display: flex;
   justify-content: center;
+  align-content: flex-start;
   flex-wrap: wrap;
 
   width: 100%;
@@ -15,7 +16,7 @@
 
   font-family: "Raleway", sans-serif;
 
-  background-color: @light;
+  background-color: @white;
 }
 
 .header__img-block {
@@ -58,7 +59,7 @@
 
   margin: 0;
   margin-top: 2.5rem;
-  margin-bottom: 30rem;
+  margin-bottom: 26.8rem;
   padding: 0;
   padding-left: 2rem;
   box-sizing: border-box;
@@ -115,6 +116,7 @@
   width: 100%;
 
   margin: 0 auto;
+  margin-bottom: 2rem;
   padding: 0;
 
   text-align: center;
@@ -139,14 +141,17 @@
   height: 11rem;
 
   margin: 0;
+  margin-bottom: 2rem;
   padding: 0;
 
   background-color: @white;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border: 1px solid @white;
 }
 
 .header__link {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,4 +163,73 @@
   text-decoration: none;
 
   cursor: pointer;
+}
+
+.header__link--white {
+  color: @white;
+}
+
+.header__link--base {
+  color: @base;
+}
+
+.header__link--bg-base {
+  background-color: @base;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.header__link--bg-exlight {
+  background-color: @exlight;
+  border-bottom: 1px solid @base;
+  border-left: 1px solid @base;
+  border-right: 1px solid @base;
+  box-sizing: border-box;
+}
+
+.header__signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 247px;
+  height: 33px;
+
+  margin: 0;
+  margin-bottom: 2rem;
+  padding: 0;
+
+
+  font-size: 20px;
+  line-height: 23px;
+  color: @black;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  border: 1px solid @black;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.header__schedule {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 54px;
+
+  background-color: @dark;
+}
+
+.header__schedule-txt {
+  width: 200px;
+  margin: 0;
+  padding: 0;
+
+  text-align: center;
+  font-size: 18px;
+  line-height: 19px;
+  color: @white;
 }
