@@ -298,6 +298,9 @@ img {
   border-top-left-radius: 0.5rem;
   border: 1px solid #ffffff;
 }
+.header__contact-block--desktop {
+  display: none;
+}
 .header__link {
   position: relative;
   display: flex;
@@ -364,6 +367,9 @@ img {
   font-size: 18px;
   line-height: 19px;
   color: #ffffff;
+}
+.header__btn-desktop {
+  display: none;
 }
 .main {
   grid-area: main;
@@ -1600,6 +1606,7 @@ img {
     background-image: url("/img/header_bg_img.jpg");
     background-repeat: no-repeat;
     background-position: right;
+    background-size: cover;
   }
   .header__img {
     display: none;
@@ -1613,10 +1620,17 @@ img {
     width: 100%;
     margin: 0;
     margin-top: 4rem;
-    margin-bottom: 26.8rem;
+    margin-bottom: 20rem;
     padding: 0;
     padding-left: 0;
     box-sizing: border-box;
+  }
+  .header__top-line-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
   }
   .header__logo-block {
     width: 15rem;
@@ -1633,8 +1647,10 @@ img {
   .header__txt {
     position: relative;
     margin: 0;
+    margin-bottom: 1.1rem;
     padding: 0;
-    padding-top: 1rem;
+    padding-top: 0;
+    padding-left: 4rem;
     font-size: 1.6em;
     line-height: 0.9em;
     color: #ffffff;
@@ -1642,8 +1658,8 @@ img {
   .header__txt::before {
     position: absolute;
     content: "";
-    top: -0.8rem;
-    left: -0.3rem;
+    top: 0;
+    left: 0;
     width: 33px;
     height: 33px;
     background-image: url("/img/logo_metro.svg");
@@ -1651,10 +1667,82 @@ img {
   .header__txt span {
     font-size: 0.8em;
   }
+  .header__contact-block--desktop {
+    display: flex;
+    background-color: transparent;
+  }
+  .header__contact-block--mob {
+    display: none;
+  }
+  .header__link--bg-exlight {
+    color: #ffffff;
+    background-color: transparent;
+    border-bottom: 1px solid #ffffff;
+  }
+  .header__h2 {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 2rem;
+    padding: 0;
+    text-align: left;
+    font-size: 4.2rem;
+    font-weight: 300;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  .header__h2 span {
+    font-size: 5.2rem;
+  }
+  .header__btn-desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+  }
+  .header__signup {
+    width: 32.3rem;
+    height: 5.8rem;
+    margin: 0;
+    margin-bottom: 0;
+    margin-left: 0.2rem;
+    padding: 0;
+    font-size: 2.8rem;
+    line-height: 3.3rem;
+    color: #625D6C;
+    border: 1px solid #ffffff;
+    background: rgba(255, 255, 255, 0.5);
+  }
+  .header__schedule {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 3rem;
+    background-color: transparent;
+  }
+  .header__schedule-txt {
+    width: 33rem;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 1.8rem;
+    line-height: 1.9rem;
+    color: #ffffff;
+  }
 }
 @media screen and (min-width: 780px) {
   .wrapper {
     padding-left: 15px;
     padding-right: 15px;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .header__img-block {
+    width: 100%;
+    height: 80rem;
+  }
+  .header__wrapper {
+    width: 100rem;
+    margin: 0 auto;
   }
 }
