@@ -3,22 +3,162 @@
   grid-area: footer;
 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 
   width: 100%;
 
   margin: 0 auto;
   padding: 0;
+  padding-top: 3rem;
 
-  background-color: @dark;
+  font-family: @font_base;
+
+  background-color: @exlight;
 }
 
-.footer__h2 {
-  margin: 0;
+.footer__signup {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 20rem;
+  height: 4rem;
+
+  margin: 0 auto;
   padding: 0;
 
-  font-size: 2em;
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
   color: @white;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: @dark;
+  border: 1px solid @white;
+  box-sizing: border-box;
+
+  cursor: pointer;
+  user-select: none;
+
+  z-index: 1;
+}
+
+.footer__contacts {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+
+  width: 100%;
+  height: 54rem;
+
+  margin: 0;
+  margin-top: -2rem;
+  padding: 0;
+
+  background-image: url("/img/footer_bg-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.footer__contacts-block {
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+
+  width: 29rem;
+
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  padding: 0;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
+
+  background: rgba(100, 84, 129, 0.79);
+  border-radius: 0.5rem;
+
+}
+
+.footer__contacts-head {
+  width: 100%;
+
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 0;
+
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  color: @white;
+  text-transform: uppercase;
+}
+
+.footer__contacts-txt {
+  width: 100%;
+
+  margin: 0;
+  margin-bottom: 0.5rem;
+  padding: 0;
+
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: @white;
+}
+
+.footer__contacts-txt--mb {
+  margin-bottom: 1rem;
+}
+
+.footer__contacts-txt--link {
+  font-size: 1.8rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer__contacts-row {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  width: 100%;
+
+  margin: 0;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+  padding: 0;
+  padding-left: 3rem;
+  box-sizing: border-box;
+}
+
+.footer__contacts-row::before {
+  position: absolute;
+  content: "";
+  top: calc(50% - 1.1rem);
+  left: 0;
+
+  width: 2.2rem;
+  height: 2.2rem;
+
+  background-image: url("/img/icon_whatsapp-color.svg");
+}
+
+
+.footer__map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 50rem;
+
+  margin: 0;
+  padding: 0;
 }
