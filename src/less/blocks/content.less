@@ -29,6 +29,11 @@
   padding: 0;
 }
 
+.content__txt-wrapper {
+  margin: 0;
+  padding: 0;
+}
+
 
 .content__h2 {
   margin: 0;
@@ -60,4 +65,72 @@
 
 .content__txt span {
   font-weight: 600;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 700px) {
+
+
+  .content__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+
+    width: 70rem;
+
+    margin: 0 auto;
+    padding-top: 5rem;
+    box-sizing: border-box;
+  }
+
+
+  .content__txt-wrapper--width {
+    width: 45%;
+  }
+
+
+  .content__h2 {
+    font-size: 4.5rem;
+  }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1020px) {
+
+  .content__wrapper {
+    width: 100rem;
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

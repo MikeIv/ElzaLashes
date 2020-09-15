@@ -147,7 +147,7 @@
   flex-wrap: wrap;
 
   width: 27.5rem;
-  height: 9.7rem;
+  min-height: 9.7rem;
 
   margin: 0 auto;
   margin-top: -2.7rem;
@@ -184,5 +184,206 @@
   font-size: 1.5rem;
   font-style: italic;
   color: @black;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 700px) {
+
+  .stars {
+    padding-top: 8rem;
+    padding-bottom: 2rem;
+    background-color: @lightgray;
+  }
+
+  .stars__wrapper {
+    width: 70rem;
+    margin-bottom: 0;
+  }
+
+
+  .stars__details {
+    display: none;
+  }
+
+
+  .stars__desktop {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .stars__header {
+    justify-content: center;
+    width: 22rem;
+    height: 4.2rem;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .stars__header::before {
+    width: 0;
+    height: 0;
+
+    mask-image: none;
+  }
+
+
+
+  .stars__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    width: 65%;
+
+    margin-top: 0;
+    padding: 0;
+
+    background-color: transparent;
+  }
+
+
+  .stars__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+
+    width: 48%;
+
+    margin: 0;
+    margin-bottom: 6rem;
+    padding: 0;
+  }
+
+  .stars__item.stars__item--width {
+    width: 100%;
+  }
+
+
+
+  .stars__item-img-block {
+    height: 28rem;
+  }
+
+
+
+  .stars__type {
+    width: 20rem;
+
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    box-sizing: border-box;
+  }
+
+
+
+  .stars__name {
+    font-size: 1.6rem;
+  }
+
+  .stars__func {
+    font-size: 1.4rem;
+  }
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1020px) {
+
+  .stars__wrapper {
+    width: 100rem;
+  }
+
+
+  .stars__header {
+    width: 27rem;
+    height: 4.5rem;
+  }
+
+
+  .stars__list {
+    width: 67%;
+  }
+
+
+  .stars__item {
+    width: 45%;
+  }
+
+
+
+
+  .stars__item-img-block {
+    height: 38rem;
+  }
+
+
+
+  .stars__type {
+    width: 25rem;
+  }
+
+
+
+  .stars__name {
+    font-size: 1.9rem;
+  }
+
+  .stars__func {
+    font-size: 1.6rem;
+  }
+
+
+
+
+
+
+
+
+
+
+
 }
 
