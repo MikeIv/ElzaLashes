@@ -80,7 +80,33 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+
+
 }
+
+.header__logo-block--anim-move-bottom {
+  position: relative;
+  animation: header__logo-block--anim-move-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 400ms both;
+
+  animation-delay: 1s;
+}
+
+
+
+
+
+@keyframes header__logo-block--anim-move-bottom {
+  0% {
+    transform: translateY(-25rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+
+
+
+
 
 .header__txt {
   position: relative;
@@ -111,6 +137,25 @@
 }
 
 
+.header__txt--anim-move-bottom {
+  position: relative;
+  animation: header__txt--anim-move-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 300ms both;
+
+  animation-delay: 1.3s;
+}
+
+
+
+@keyframes header__txt--anim-move-bottom {
+  0% {
+    transform: translateY(-25rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+
+
 .header__h2 {
   width: 100%;
 
@@ -129,6 +174,7 @@
 .header__h2 span {
   font-size: 1.28em;
 }
+
 
 
 .header__contact-block {
@@ -153,6 +199,13 @@
   display: none;
 }
 
+
+
+
+
+
+
+
 .header__link {
   position: relative;
   display: flex;
@@ -167,6 +220,7 @@
 
   cursor: pointer;
 }
+
 
 .header__link--white {
   color: @white;
@@ -189,6 +243,59 @@
   border-right: 1px solid @base;
   box-sizing: border-box;
 }
+
+
+.header__link--phone::before {
+  position: absolute;
+  content: "";
+
+  top: calc(50% - 0.8rem);
+  left: 1.3rem;
+
+  width: 1.6rem;
+  height: 1.6rem;
+
+  background-image: url("/img/icon_phone.svg");
+}
+
+
+
+
+.header__link--whatsapp::before {
+  position: absolute;
+  content: "";
+
+  top: calc(50% - 1.2rem);
+  left: 1rem;
+
+  width: 2.4rem;
+  height: 2.4rem;
+
+  background-image: url("/img/icon_whatsapp.svg");
+  background-size: cover;
+}
+
+
+
+.header__link--instagram::before {
+  position: absolute;
+  content: "";
+
+  top: calc(50% - 1.1rem);
+  left: 1rem;
+
+  width: 2.2rem;
+  height: 2.2rem;
+
+  background-image: url("/img/icon_instagram.svg");
+  background-size: cover;
+}
+
+
+
+
+
+
 
 .header__signup {
   display: flex;
@@ -360,7 +467,21 @@
   .header__contact-block--desktop {
     display: flex;
     background-color: transparent;
+
+    animation: header__contact-block--desktop 0.7s ease-out both;
+
+    animation-delay: 0.3s;
   }
+
+  @keyframes header__contact-block--desktop {
+    0% {
+      transform: translateX(-1500px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
 
 
 
@@ -391,13 +512,14 @@
     text-align: left;
     font-size: 4.2rem;
     font-weight: 300;
+    line-height: 4.5rem;
     color: @white;
 
     cursor: pointer;
   }
 
   .header__h2 span {
-    font-size: 5.2rem;
+    font-size: 5.3rem;
   }
 
 
