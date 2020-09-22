@@ -446,6 +446,110 @@ img {
 .header__btn-desktop {
   display: none;
 }
+/*--- menu ---*/
+.header__menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80%;
+  min-height: 100vh;
+  z-index: 2;
+}
+#menu__toggle {
+  opacity: 0;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__list {
+  display: flex;
+  right: 0;
+  transition-duration: 1s;
+}
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  transition-duration: 0.25s;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+.menu__list {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 85%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  padding-top: 8rem;
+  padding-bottom: 6rem;
+  box-sizing: border-box;
+  list-style: none;
+  background-color: #C9AEF9;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  transition-duration: 1s;
+}
+.menu__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 4rem;
+  padding-right: 2rem;
+}
+.menu__item-link {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  transition-duration: 0.25s;
+  z-index: 1;
+}
+.menu__item-link:hover {
+  color: #EEE4FF;
+}
 .main {
   grid-area: main;
   position: relative;
@@ -1833,6 +1937,9 @@ img {
     color: #625D6C;
     border: 1px solid #ffffff;
     background: rgba(255, 255, 255, 0.5);
+  }
+  .header__signup.header__signup--mobile {
+    display: none;
   }
   .header__schedule {
     display: flex;
