@@ -343,6 +343,7 @@ img {
   border-top-right-radius: 0.5rem;
   border-top-left-radius: 0.5rem;
   border: 1px solid #ffffff;
+  box-sizing: border-box;
 }
 .header__contact-block--desktop {
   display: none;
@@ -1901,7 +1902,11 @@ img {
   .header__link--bg-exlight {
     color: #ffffff;
     background-color: transparent;
+    border-bottom: none;
+  }
+  .header__link--whatsapp {
     border-bottom: 1px solid #ffffff;
+    box-sizing: border-box;
   }
   .header__h2 {
     width: 100%;
@@ -2111,6 +2116,9 @@ img {
   .services__type {
     width: 20rem;
     min-height: 15rem;
+  }
+  .services__type--mt {
+    margin-top: 0;
   }
   .services__head {
     font-size: 1.6rem;
@@ -2361,6 +2369,12 @@ img {
     margin-bottom: 6rem;
     padding: 0;
   }
+  .questions__head {
+    width: auto;
+  }
+  .questions__work {
+    width: auto;
+  }
   .footer {
     padding: 0;
   }
@@ -2371,8 +2385,35 @@ img {
     order: 1;
   }
   .footer__contacts {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 70rem;
+    height: auto;
+    margin: 0;
+    padding: 0;
     order: 2;
     background-image: none;
+  }
+  .footer__contacts-block {
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    width: 50rem;
+    margin: 0;
+    padding: 0;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    box-sizing: border-box;
+    color: #625D6C;
+    background: transparent;
+    border: none;
+    border-radius: unset;
+  }
+  .footer__contacts-head {
+    color: #625D6C;
   }
 }
 @media screen and (min-width: 780px) {

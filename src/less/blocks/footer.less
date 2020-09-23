@@ -188,9 +188,48 @@
 
 
   .footer__contacts {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: 70rem;
+    height: auto;
+    margin: 0;
+    padding: 0;
+
     order: 2;
 
     background-image: none;
+  }
+
+
+
+  .footer__contacts-block {
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+
+    width: 50rem;
+
+    margin: 0;
+
+    padding: 0;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    box-sizing: border-box;
+
+    color: @darkgray;
+
+    background: transparent;
+    border: none;
+    border-radius: unset;
+
+  }
+
+  .footer__contacts-head {
+    color: @darkgray;
   }
 
 
